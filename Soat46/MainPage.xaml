@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Soat46.MainPage">
+
+    <Grid RowDefinitions="auto,*" Padding="10">
+
+        <Grid ColumnDefinitions="auto,*,auto">
+            <Button  Text="Tahrirlash"
+                     FontSize="20" TextColor="Orange"
+                     Background="Transparent"  />
+            
+            <Label  Text="Budilniklar" Grid.Column="1"
+                    FontSize="24" TextColor="Red" 
+                    VerticalOptions="Center"/>
+            
+            <Button Text="+" Grid.Column="2" TextColor="Black"
+                    FontSize="26" BackgroundColor="Transparent"
+                    Clicked="Button_Clicked"
+                    />
+        </Grid>
+        <CollectionView Grid.Row="1" x:Name="Alarmslist">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" RowDefinitions="auto,auto"
+                 ColumnDefinitions="auto,*,auto" >
+
+                        <Label Text="{Binding Time}" FontSize="36"/>
+
+                        <Switch  Grid.RowSpan="2" Grid.Column="2" 
+                               IsToggled="{Binding IsEnabled}"  />
+                        
+                        <Label Text="{Binding Name}" FontSize="26"
+                               Grid.Row="1"/>
+                        <Label Text="{Binding Repeat}" FontSize="26"
+                          Grid.RowSpan="2" Grid.Column="1" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"
+                               />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+
+
+
+    </Grid>
+
+</ContentPage>

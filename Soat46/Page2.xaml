@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Soat46.Page2"
+             Title="Page2">
+
+    <Grid RowDefinitions="auto,*" Padding="10">
+        <Grid ColumnDefinitions="auto,*,auto">
+            <Button  Text="Bekor qilish"
+             FontSize="14" TextColor="Orange"
+             Background="Transparent" 
+                     Clicked="Button_Clicked"/>
+
+            <Label  Text="Yangi budilnik" Grid.Column="1"
+            FontSize="14" TextColor="Red" 
+                    HorizontalOptions="Center"
+            />
+
+            <Button Text="Saqlash" Grid.Column="2" TextColor="Black"
+            FontSize="14" BackgroundColor="Transparent"
+          Clicked="Button_Clicked_1"
+            />
+        </Grid>
+        <VerticalStackLayout Grid.Row="1" Padding="10">
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="&#xe856;" FontFamily="MaterialIcons" FontSize="40"
+                      TextColor="Red"/>
+                <TimePicker x:Name="Time"  Format="HH:MM" 
+                   HorizontalOptions="FillAndExpand"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="&#xe040;" FontFamily="MaterialIcons" FontSize="40"
+            TextColor="Red"/>
+                <Picker x:Name="Repeat" HorizontalOptions="FillAndExpand" >
+                    <Picker.Items>
+                        <x:String>Hech qachon</x:String>
+                        <x:String>Har  kuni</x:String>
+                    </Picker.Items>                   
+                    
+                </Picker>
+            </HorizontalStackLayout>
+            
+            
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="&#xe3c9;" FontFamily="MaterialIcons" FontSize="40"
+           TextColor="Red"/>
+                <Entry x:Name="Name"  Placeholder="Nomini kiriting"/>
+            </HorizontalStackLayout>
+      
+
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="&#xe7f4;" FontFamily="MaterialIcons" FontSize="40"
+   TextColor="Red"/>
+                <Switch x:Name="IsEnabled" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
