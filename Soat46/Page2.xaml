@@ -18,7 +18,7 @@
 
             <Button Text="Saqlash" Grid.Column="2" TextColor="Black"
             FontSize="14" BackgroundColor="Transparent"
-          Clicked="Button_Clicked_1"
+          Clicked="Button_Save"
             />
         </Grid>
         <VerticalStackLayout Grid.Row="1" Padding="10">
@@ -26,7 +26,7 @@
             <HorizontalStackLayout Spacing="10">
                 <Label Text="&#xe856;" FontFamily="MaterialIcons" FontSize="40"
                       TextColor="Red"/>
-                <TimePicker x:Name="Time"  Format="HH:MM" 
+                <TimePicker x:Name="Time"  Format="HH:mm" 
                    HorizontalOptions="FillAndExpand"/>
             </HorizontalStackLayout>
 
@@ -41,7 +41,27 @@
                     
                 </Picker>
             </HorizontalStackLayout>
-            
+
+            <VerticalStackLayout >
+                <Label Text="Kunlarni tanlang"/>
+                <HorizontalStackLayout>
+   <Button Text="Du" x:Name="BtnDu" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                    <Button Text="Se" x:Name="BtnSe" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                    <Button Text="Ch" x:Name="BtnCh" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                    <Button Text="Pa" x:Name="BtnPa" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                    <Button Text="Ju" x:Name="BtnJu" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                    <Button Text="Sh" x:Name="BtnSha" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                    <Button Text="Yak" x:Name="BtnYak" Background="Transparent"  TextColor="Red"  FontSize="20" Padding="0"
+           WidthRequest="50" HeightRequest="50" CornerRadius="25"/>
+                  
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
             
             <HorizontalStackLayout Spacing="10">
                 <Label Text="&#xe3c9;" FontFamily="MaterialIcons" FontSize="40"

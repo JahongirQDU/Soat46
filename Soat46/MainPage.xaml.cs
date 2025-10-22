@@ -18,6 +18,14 @@ namespace Soat46
             };
             Alarmslist.ItemsSource = alarms;
 
+            Page2.AlarmAdded += (s, alarm) =>
+            {
+               MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    alarms.Add(alarm);
+                });
+            };
+
         }
 
        
